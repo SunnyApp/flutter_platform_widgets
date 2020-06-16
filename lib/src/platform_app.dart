@@ -44,6 +44,7 @@ abstract class _BaseData {
   final Key widgetKey;
   final GlobalKey<NavigatorState> navigatorKey;
   final Widget home;
+
   final Map<String, WidgetBuilder> routes;
   final String initialRoute;
   final RouteFactory onGenerateRoute;
