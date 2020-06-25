@@ -574,6 +574,18 @@ Renders a parent widget for either `Cupertino` or `Material` while sharing a com
  );
 ```
 
+## PlatformWidgetBuilder
+
+Renders a parent widget for either `Cupertino` or `Material` while sharing a common child Widget
+
+```dart
+ PlatformWidgetBuilder(;
+   cupertino: (_, child, __) => GestureDetector(child: child, onTap: _handleTap),
+   material: (_, child, __) => IniWell(child: child, onTap: _handleTap),
+   child: Container(child: Text('Common text')),
+ );
+```
+
 # TODO
 
 - UI / Unit Tests.
