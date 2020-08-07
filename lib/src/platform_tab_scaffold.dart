@@ -443,6 +443,10 @@ class PlatformTabController extends ChangeNotifier {
     return _materialController;
   }
 
+  CupertinoTabController cupertino(BuildContext context) => _cupertino(context);
+
+  MaterialTabController material(BuildContext context) => _material(context);
+
   int index(BuildContext context) {
     _init(context);
 
