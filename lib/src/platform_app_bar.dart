@@ -4,7 +4,8 @@
  * See LICENSE for distribution and usage details.
  */
 
-import 'package:flutter/cupertino.dart' show CupertinoNavigationBar;
+import 'package:flutter/cupertino.dart'
+    show CupertinoNavigationBar, ObstructingPreferredSizeWidget;
 import 'package:flutter/material.dart' show AppBar, Brightness, TextTheme;
 import 'package:flutter/widgets.dart';
 
@@ -125,8 +126,8 @@ class CupertinoNavigationBarData extends _BaseData {
   final Brightness brightness;
 }
 
-class PlatformAppBar
-    extends PlatformWidgetBase<CupertinoNavigationBar, PreferredSizeWidget> {
+class PlatformAppBar extends PlatformWidgetBase<ObstructingPreferredSizeWidget,
+    PreferredSizeWidget> {
   final Key widgetKey;
 
   final Widget title;
@@ -183,7 +184,7 @@ class PlatformAppBar
   }
 
   @override
-  CupertinoNavigationBar createCupertinoWidget(BuildContext context) {
+  ObstructingPreferredSizeWidget createCupertinoWidget(BuildContext context) {
     final data = cupertino?.call(context, platform(context));
 
     var trailing = trailingActions == null || trailingActions.isEmpty

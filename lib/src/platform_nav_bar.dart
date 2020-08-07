@@ -17,7 +17,7 @@ const Color _kDefaultTabBarBorderColor = Color(0x4C000000);
 const Color _kDefaultTabBarInactiveColor = CupertinoColors.inactiveGray;
 
 abstract class _BaseData {
-  _BaseData(
+  const _BaseData(
       {this.widgetKey,
       this.items,
       this.backgroundColor,
@@ -36,7 +36,7 @@ abstract class _BaseData {
 }
 
 class CupertinoTabBarData extends _BaseData {
-  CupertinoTabBarData({
+  const CupertinoTabBarData({
     Color backgroundColor,
     List<BottomNavigationBarItem> items,
     Color activeColor,
@@ -155,9 +155,9 @@ class PlatformNavBar extends PlatformWidgetBase<CupertinoTabBar, BottomAppBar> {
       showUnselectedLabels: data?.showUnselectedLabels,
       unselectedFontSize: data?.unselectedFontSize ?? 12.0,
       unselectedItemColor: data?.unselectedItemColor,
-      selectedIconTheme: data?.selectedIconTheme ?? const IconThemeData(),
+      selectedIconTheme: data?.selectedIconTheme,
       selectedLabelStyle: data?.selectedLabelStyle,
-      unselectedIconTheme: data?.unselectedIconTheme ?? const IconThemeData(),
+      unselectedIconTheme: data?.unselectedIconTheme,
       unselectedLabelStyle: data?.unselectedLabelStyle,
       mouseCursor: data?.mouseCursor,
     );
