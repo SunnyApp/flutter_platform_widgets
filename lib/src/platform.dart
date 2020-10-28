@@ -103,7 +103,6 @@ Future<T> showPlatformDialog<T>({
   RouteSettings routeSettings,
   bool useRootNavigator = true,
   bool materialUseSafeArea = true,
-  Color materialBarrierColor,
 }) {
   if (isMaterial(context)) {
     return showDialog<T>(
@@ -113,8 +112,6 @@ Future<T> showPlatformDialog<T>({
       routeSettings: routeSettings,
       useRootNavigator: useRootNavigator,
       useSafeArea: materialUseSafeArea,
-      //child: , deprecated
-      barrierColor: materialBarrierColor,
     );
   } else {
     return showCupertinoDialog<T>(
