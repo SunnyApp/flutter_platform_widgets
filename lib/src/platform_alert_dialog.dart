@@ -136,7 +136,7 @@ class PlatformAlertDialog
       actionsOverflowButtonSpacing: data?.actionsOverflowButtonSpacing,
       clipBehavior: data?.clipBehavior ?? Clip.none,
       insetPadding: data?.insetPadding ?? _defaultInsetPadding,
-      useMaterialBorderRadius: data?.useMaterialBorderRadius,
+      // useMaterialBorderRadius: data?.useMaterialBorderRadius,
     );
   }
 
